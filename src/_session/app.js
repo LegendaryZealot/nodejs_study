@@ -24,10 +24,8 @@ app.use(function(req, res, next) {
  if (req.url === '/favicon.ico') {
   return
  }
-
- // 同一个浏览器而言，req是同一个
+ 
  var sess = req.session;
- console.log(sess)
 
  if (sess.views) {
   sess.views++;
@@ -36,7 +34,8 @@ app.use(function(req, res, next) {
  }
  res.setHeader('Content-Type', 'text/html');
  res.write('<p>views: ' + sess.views + '</p>');
+ res.write(JSON.stringify(req))
  res.end();
 });
 
-app.listen(4000);
+app.listen(5777);

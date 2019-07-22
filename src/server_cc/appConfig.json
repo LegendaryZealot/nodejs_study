@@ -1,0 +1,9 @@
+{
+    "staticResDir":"./staticRes",
+    "host":"localhost",
+    "httpPort":5777,
+    "httpsPort":443,
+    "sslPrivateKeyPath":"sslFiles/ssl.key",
+    "sslCertificatePath":"sslFiles/ssl.crt",
+    "mongoDbUrl":"mongodb://localhost:27017/"
+}
